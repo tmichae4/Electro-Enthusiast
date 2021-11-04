@@ -50,5 +50,3 @@ SO THAT I can can search for TVs and game consoles, write, read and rate (thumbs
 Tia M. ~ Tiaamichaelss@gmail.com
 
 ## ACKNOWLEGEMENTS
-
-This awesome team that built this application!!! 
