@@ -55,8 +55,5 @@ User.init(
     }
 );
 
-// bcrypt.hash(myPlaintextPassword, saltRounds).then(function(hash) {
-//     // Store hash in your password DB.
-// });
 
 module.exports = User;
