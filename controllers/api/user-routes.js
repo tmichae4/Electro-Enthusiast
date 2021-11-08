@@ -66,7 +66,7 @@ router.post('/login', (req, res) => {
         }
     }).then(dbUserData => {
         if (!dbUserData) {
-            res.status(400).json({ message: 'No user that email address'});
+            res.status(400).json({ message: 'No user with that email address'});
             return;
         }
         
