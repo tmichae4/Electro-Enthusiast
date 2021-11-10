@@ -25,7 +25,7 @@ async function signupFormHandler(event){
         }
       }
 
-document.querySelector('#signup-form').addEventListener('#submit', signupFormHandler);
+document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);
 
 async function loginFormHandler(event) {
   event.preventDefault();
@@ -51,16 +51,16 @@ async function loginFormHandler(event) {
     }
   }
 
-document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
 
-// const sign_in_btn = document.querySelector("#sign-in-btn");
-// const sign_up_btn = document.querySelector("#sign-up-btn");
-// const container = document.querySelector(".container");
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
 
-// sign_up_btn.addEventListener("click", () => {
-//   container.classList.add("sign-up-mode");
-// });
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
+});
 
-// sign_in_btn.addEventListener("click", () => {
-//   container.classList.remove("sign-up-mode");
-// });
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
