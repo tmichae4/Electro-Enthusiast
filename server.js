@@ -5,6 +5,8 @@ const sequelize = require('./config/connection');
 const path = require('path');
 
 const exphbs = require('express-handlebars');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 const hbs = exphbs.create();
 
 const app = express();
@@ -17,7 +19,10 @@ app.use(session({
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true }
+    cookie: { secure: false },
+    store: new SequelizeStore({
+      db: sequelize
+    })
   }))
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

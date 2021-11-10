@@ -5,18 +5,26 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>...</title>
      <link rel="stylesheet" href="/stylesheets/webpage.css">
- </head> 
- <body>
-     <nav class="navbar">
+     <link rel="stylesheet" href="/stylesheets/style.css"
+ </head>
+
+     {{!-- <nav class="navbar">
      <ul>
          <li><a href='#Phones'>Phones</a></li>
          <li><a href='#Computers'>Computers</a></li>
          <li><a href='#Tv'>Tv</a></li>
          <li><a href='#Gameconsole'>Game Consoles</a></li>
-     </ul>
-     </nav>
+          <button id="logout" class="btn-no-style">logout</button>
 
-    <div class="top-bar">
+     </ul>
+     </nav> --}}
+  <div class="wrapper">
+    <main>
+      {{{ body }}}
+    </main>
+  </div>
+
+    {{!-- <div class="top-bar">
         <h1>
             My Forum
         </h1>
@@ -24,7 +32,7 @@
     <div class="main">
   <ol>
       <li class="row">
-          <a href="/posts">
+          <a href="/posts/">
           <h4 class="title">
             PS5 Digital Edition
           </h4>
@@ -56,8 +64,11 @@
     </li>
   </ol>
     </div>
-
-     {{!-- <section id="Phones">
+      <script src="/javascript/logout.js"></script>
+ </body>
+ </html>  --}}
+ 
+<section id="Phones">
          <div class="main">
              <h1 Class="headings">Phones</h1>
              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, facere soluta aliquam corporis ad harum quas dicta quasi fugiat ipsam modi delectus, rerum accusantium impedit laborum voluptatem at nesciunt voluptate.
@@ -97,6 +108,6 @@
                  <input type="submit" value="SEND" id="send"> </p>
          </div>
 
-     </section> --}}
- </body>
- </html> 
+     </section>
+     <script src="/javascript/logout.js"></script>
+     </body>
