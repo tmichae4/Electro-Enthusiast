@@ -47,6 +47,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  console.log(req.body)
     User.create({
         username: req.body.username,
         email: req.body.email,
@@ -74,9 +75,9 @@ router.post('/login', (req, res) => {
           res.status(400).json({ message: 'No user with that email address!' });
           return;
         }
-    
+        console.log(dbUserData)
         const validPassword = dbUserData.checkPassword(req.body.password);
-    
+        console.log(validPassword)
         if (!validPassword) {
           res.status(400).json({ message: 'Incorrect password!' });
           return;
