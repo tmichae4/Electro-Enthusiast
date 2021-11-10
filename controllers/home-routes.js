@@ -37,12 +37,14 @@ router.get('/', (req, res) => {
   });
   
   router.get('/login', (req, res) => {
+    console.log(req.session)
     if (req.session.loggedIn) {
-      res.redirect('/webpage');
+      res.redirect('/');
       return;
     }
   
     res.render('login');
+ 
   });
  
   router.get('/post/:id', (req, res) => {
@@ -81,7 +83,7 @@ router.get('/', (req, res) => {
         const post = dbPostData.get({ plain: true });
   
         // pass data to template
-        res.render('single-post', { post });
+        res.render('post', { post });
       })
       .catch(err => {
         console.log(err);
