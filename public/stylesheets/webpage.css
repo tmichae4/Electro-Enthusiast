@@ -239,6 +239,7 @@ p {
     display: flex;
     color: black;
     font-size: 15px;
+    font-weight: bold;
 }
 .timestamp {
     padding-left: 10px;
