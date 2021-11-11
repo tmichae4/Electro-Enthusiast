@@ -27,6 +27,10 @@ input {
   left: 0;
 }
 
+h4 {
+margin: 0px;
+}
+
 .signin-signup {
   position: absolute;
   top: 50%;
@@ -396,5 +400,9 @@ form.sign-in-form {
   .container.sign-up-mode:before {
     bottom: 28%;
     left: 50%;
+  }
+
+  .timestamp {
+    padding-left: 10px;
   }
 }
