@@ -10,7 +10,7 @@
       <span class=""> </span>
       </div>
      <div class="card-content"></div>
-     {{post_content}}
+     {{post-content}}
         </div>
   <div class="meta">
     {{user.username}} on {{format_date created_at}}
@@ -18,6 +18,8 @@
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
 </article>
+
+
 
 {{!-- <ol class="post-list">
     {{#each posts as |post|}}

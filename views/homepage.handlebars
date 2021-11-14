@@ -1,12 +1,18 @@
+<ol class="post-list">
+  <li>
+    <article class="post">
+      <div class="title">
+       {{title}}
+        |
+        {{post-content}}
+      </div>
+      <div class="meta">
+        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+      </div>
+    </article>
+  </li>
+</ol>
 
-{{#each posts as |post|}}
-
-{{> post-info post }}
-
-
-{{else}}
-<h4 class="pb-4 has-text-centered is-italic">No posts yet!</h4>
-{{/each}} 
  
  
  {{!-- <nav class="navbar">
