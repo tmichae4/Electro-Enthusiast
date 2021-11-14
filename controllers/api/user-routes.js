@@ -65,7 +65,6 @@ router.post('/', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-  console.log(req.body)
     User.findOne({
         where: {
           email: req.body.email
@@ -75,20 +74,19 @@ router.post('/login', (req, res) => {
           res.status(400).json({ message: 'No user with that email address!' });
           return;
         }
-        console.log(dbUserData)
-        const validPassword = dbUserData.checkPassword(req.body.password);
-        console.log(validPassword)
-        if (!validPassword) {
-          res.status(400).json({ message: 'Incorrect password!' });
-          return;
-        }
-    
-        req.session.save(() => {
-          // declare session variables
-          req.session.user_id = dbUserData.id;
-          req.session.username = dbUserData.username;
-          req.session.loggedIn = true;
-    
+       
+    const validPassword = dbUserData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res.status(400).json({ message: 'Incorrect password!' });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+
           res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
       });
@@ -142,7 +140,6 @@ router.delete('/:id', (req, res) => {
             });
           }
           else {
-            console.log("sum")
             res.status(500).end();
           }
     });
