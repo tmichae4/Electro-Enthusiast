@@ -13,7 +13,7 @@ SO THAT I can can search for TVs and game consoles, write, read and rate (thumbs
 
 ## FINAL PRODUCT
 
-![Electro_Enthusiast]("C:\Users\Hagen\OneDrive\Pictures\Screenshots\WM-Screenshots-20211113231854.png")
+![image]("C:\Users\Hagen\OneDrive\Pictures\Screenshots\WM-Screenshots-20211113231854.png")
 
 
 ## BUILT WITH
