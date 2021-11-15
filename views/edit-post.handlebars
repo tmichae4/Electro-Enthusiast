@@ -1,5 +1,5 @@
 <article>
-  <a href="/views/dashboard.handlebars"> &larr; Back to dashboard</a>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
   <h2>
     Edit Post
   </h2>
@@ -24,7 +24,7 @@
 
 <form class="comment-form">
   <div>
-    <textarea name="content"></textarea>
+    <textarea name="comment_text"></textarea>
   </div>
 
   <div>
@@ -34,6 +34,6 @@
 
 {{> comments post.comments}}
 
-<script src="/public/javascript/edit-posts.js"></script>
-<script src="/public/javascript/delete.posts.js"></script>
-<script src="/public/javascript/comment.js"></script>
+<script src="/javascript/edit-posts.js"></script>
+<script src="/javascript/delete.posts.js"></script>
+<script src="/javascript/comment.js"></script>

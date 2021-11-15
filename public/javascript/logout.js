@@ -1,9 +1,7 @@
 async function logout() {
-  console.log('hello')
     const response = await fetch('/api/users/logout', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
-     body: JSON.stringify( {loggedIn: false} )
     });
   
     if (response.ok) {

@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
       attributes: [
         'id',
         'title',
-        'body',
+        'post_content',
         'created_at',
       ],
       include: [
@@ -28,24 +28,17 @@ router.get('/', (req, res) => {
     })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }))
-      res.render('homepage', { posts });
+      res.render('homepage', { 
+        posts,
+      loggedIn: req.session.loggedIn
+     });
     })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
   });
-  
-  router.get('/login', (req, res) => {
-    console.log(req.session)
-    if (req.session.loggedIn) {
-      res.redirect('/');
-      return;
-    }
-  
-    res.render('login');
- 
-  });
+
  
   router.get('/post/:id', (req, res) => {
     Post.findOne({
@@ -54,14 +47,14 @@ router.get('/', (req, res) => {
       },
       attributes: [
         'id',
-        'post_url',
         'title',
+        'post_content',
         'created_at',
       ],
       include: [
         {
           model: Comment,
-          attributes: ['id', 'content', 'post_id', 'user_id', 'created_at'],
+          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
             attributes: ['username']
@@ -79,11 +72,12 @@ router.get('/', (req, res) => {
           return;
         }
   
-        // serialize the data
         const post = dbPostData.get({ plain: true });
-  
-        // pass data to template
-        res.render('post', { post });
+
+        res.render('single-post', { 
+          post,
+        loggedIn: req.session.loggedIn
+       });
       })
       .catch(err => {
         console.log(err);
@@ -91,24 +85,15 @@ router.get('/', (req, res) => {
       });
   });
 
-
-
-
-  router.get('/post/:id', (req, res) => {
-    const post = {
-      id: 1,
-      post_url: 'https://handlebarsjs.com/guide/',
-      title: 'Handlebars Docs',
-      created_at: new Date(),
-      vote_count: 10,
-      comments: [{}, {}],
-      user: {
-        username: 'test_user'
-      }
-    };
-
-    res.render('single-post', { post });
-  })
-
+  router.get('/login', (req, res) => {
+    console.log(req.session)
+    if (req.session.loggedIn) {
+      res.redirect('/dashboard');
+      return;
+    }
+  
+    res.render('login');
+ 
+  });
 
   module.exports = router;
