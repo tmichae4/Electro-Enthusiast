@@ -2,17 +2,18 @@
   <li>
     <article class="post">
       <div class="title">
-       {{title}}
-        |
-        {{post_content}}
+        {{title}}</a>
+        <span>({{post_url}})</span>
       </div>
       <div class="meta">
+        {{vote_count}} point(s) by {{user.username}} on
+        {{created_at}}
+        |
         <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
       </div>
     </article>
   </li>
 </ol>
-
  
  
  {{!-- <nav class="navbar">
