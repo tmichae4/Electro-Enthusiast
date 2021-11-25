@@ -8,20 +8,19 @@
 
  </head>
 
-<body>
-  <div class="wrapper">
-    {{!-- <header>
-      <h1>
-        <a href="/">Electro_Enthusiast</a>
-      </h1> --}}
-      <nav>
+  <div class="navbar" id="navbar">
        {{#if loggedIn}}
-       <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{/if}}
-      </nav>
+        <a href="/dashboard" id="dashboard">dashboard</a>
+        <button id="logout" class="logout-btn">logout</button>
+  </div>
+    <div class="header">
+      <header>
+        <p>Welcome to the community. This is your place to ask questions, leave reviews, and interact with fellow electronic enthusiats. Check out new posts below and let's get to chatting!</p>
+      </h1>
+      {{/if}}
     </header>
-  <div class=""></div>
+</div>
+
     <main>
       {{{ body }}}
     </main>
@@ -34,6 +33,5 @@
   <script src="/javascript/logout.js"></script>
   {{/if}}
 
-</body>
 
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>

@@ -12,7 +12,8 @@ const hbs = exphbs.create({ helpers });
 // add - helpers - between brackets
 
 const app = express();
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3006;
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

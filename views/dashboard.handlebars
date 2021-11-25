@@ -1,24 +1,8 @@
-<section>
-  <h2>Create New Post</h2>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-     <div>
-        <label for="post-content">Post Content</label>
-      <input class="textarea" name="post-content" type="text" value="{{post.post_content}}" />
-    </div>
-    <div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
 
 {{#if posts.length}}
-<section>
+<section class="posts">
   <h2>Your Posts</h2>
-  <ol>
+  <ol class="post-list">
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
@@ -30,15 +14,33 @@
 {{/if}}
 
 
-<section>
+<section class="posts">
   <h2>All Posts</h2>
-  {{#each posts as |post|}}
-
-{{> post-info post }}
-</div>
-
+    <ol class="post-list">
+      {{#each posts as |post|}}
+    <li>
+      {{> post-info post }}
+    </li>
 {{else}}
 <h6 class="pb-4 has-text-centered is-italic">there are currently no posts</h6>
 {{/each}}
 </ol> 
+  </section>
+  
+  <section class="posts">
+    <h2>Create New Post</h2>
+    <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+     <div>
+        <label for="post-content">Post Content</label>
+      <input class="textarea" name="post-content" type="text" value="{{post_content}}" />
+    </div>
+    <div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
 <script src="/javascript/add-post.js"></script>
+

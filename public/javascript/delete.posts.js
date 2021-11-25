@@ -15,4 +15,5 @@ async function deleteFormHandler(event) {
     }
   }
   
-  document.querySelector('.delete-post-btn').addEventListener('submit', deleteFormHandler);
+  document.querySelector('.delete-post-btn').addEventListener('submit', deleteFormHandler); 
+  // try click if submit errors

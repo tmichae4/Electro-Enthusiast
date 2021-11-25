@@ -6,10 +6,100 @@
   box-sizing: border-box;
 }
 
-body,
+html{
+  scroll-behavior: smooth;
+}
+
+#navbar{
+  display:flex;
+  justify-content: space-between;
+  background-color:#52057b;
+  /* padding: 10px; */
+  border-radius: 5px;
+  max-height: 80px;
+}
+
+.navbar a:hover{
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 10px grey;
+  cursor: pointer;
+}
+
+#dashboard {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.logout-btn{
+  width: 150px;
+  background-color: black;
+  border: none;
+  outline: none;
+  height: 30px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.header{
+  border: solid 1px #52057b;
+  margin-top: 20px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  box-shadow: 1px 2px 3px #52057b;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+}
+
 input {
   font-family: "Poppins", sans-serif;
 }
+
+footer { 
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #52057b;
+  color: whitesmoke;
+  display: block;
+  text-align: center;
+}
+
+h2 {
+  padding: 5px;
+  margin: 2px;
+  background-color: #2C2C2C;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0,0,0);;
+  height: 840px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* .welcome {
+  font-family: sans-serif;
+  font-size: 24;
+  text-align: center;
+  padding: 5px;
+} */
 
 .container {
   position: relative;
@@ -206,6 +296,7 @@ form.sign-in-form {
 
 .panel .content {
   color: #fff;
+  padding: 5px;
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }
@@ -217,8 +308,9 @@ form.sign-in-form {
 }
 
 .panel p {
-  font-size: 0.95rem;
-  padding: 0.7rem 0;
+  font-size: 24;
+  text-align: center;
+  padding: 5px;
 }
 
 .btn.transparent {
@@ -412,5 +504,7 @@ form.sign-in-form {
     color: black;
     font-size: 15px;
     font-weight: bold;
-}
-}
+  }
+};
+
+
