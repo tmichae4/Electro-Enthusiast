@@ -4,6 +4,7 @@ const { Post, User, Comment } = require('../models');
 
 
 router.get('/', (req, res) => {
+
     Post.findAll({
       attributes: [
         'id',
@@ -33,14 +34,13 @@ router.get('/', (req, res) => {
       posts,
       loggedIn: req.session.loggedIn
      });
-    })
+     })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
-  });
+   })
 
- 
   router.get('/post/:id', (req, res) => {
     Post.findOne({
       where: {
