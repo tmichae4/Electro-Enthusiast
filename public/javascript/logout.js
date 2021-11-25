@@ -5,7 +5,7 @@ async function logout() {
     });
   
     if (response.ok) {
-      document.location.replace('/login');
+      document.location.replace('/login'); //change to login if error
     } else {
       alert(response.statusText);
     }
