@@ -5,14 +5,18 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Electro_Enthusiast</title>
      <link rel="stylesheet" href="../../stylesheets/style.css">
-
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
  </head>
 
+<body>
+{{#if loggedIn}}
+<nav>
   <div class="navbar" id="navbar">
-       {{#if loggedIn}}
         <a href="/dashboard" id="dashboard">dashboard</a>
         <button id="logout" class="logout-btn">logout</button>
   </div>
+</nav>
     <div class="header">
       <header>
         <p>Welcome to the community. This is your place to ask questions, leave reviews, and interact with fellow electronic enthusiats. Check out new posts below and let's get to chatting!</p>
@@ -32,6 +36,6 @@
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
-
-
+</body>
+</html>  
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
