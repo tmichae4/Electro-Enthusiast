@@ -99,7 +99,12 @@ textarea {
   border: 1px solid #ccc;
   padding: 30px;
   margin: 5px;
-  
+  display: flex;
+  min-width: 40%;
+  min-height: 100px;
+  padding: 30px;
+  text-align: center;
+  margin: 5px;
 }
 
 textarea:focus {
@@ -108,18 +113,18 @@ textarea:focus {
   padding: 30px;
   margin: 5px;
 }
-
-textarea, input {
+/* textarea {
   min-width: 40%;
   min-height: 100px;
   padding: 30px;
   text-align: center;
   margin: 5px;
-}
+} */
 
 input {
   font-family: "Poppins", sans-serif;
 }
+
 
 .posts {
   border: solid 4px #52057b;
@@ -166,6 +171,7 @@ input {
 
 .new-post-form input {
   width: 300px;
+  flex-wrap: wrap;
 }
 
 .edit-post-form {
