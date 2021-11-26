@@ -34,9 +34,8 @@ http://localhost:3001/login
 
 ## FUTURE DEVELOPMENT
 
-- Add more features
+- Add more features : avatar, like/dislike, inbox, categories, tags, search bar
 - Add more styling
-- Add a footer
 
 ## ROADMAP
 

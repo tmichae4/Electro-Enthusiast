@@ -45,13 +45,6 @@ a:hover {
   margin: 10px 0;
 }
 
-#my-account {
-  color: whitesmoke;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 10px 0;
-}
-
 .logout-btn{
   width: 150px;
   background-color: black;
@@ -68,6 +61,18 @@ a:hover {
 }
 
 button {
+  background-color: darkgray;
+  border: 0;
+  padding: 1%;
+  margin: 5px;
+  color: white;
+  font-weight: bold;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit {
   background-color: darkgray;
   border: 0;
   padding: 1%;
@@ -88,25 +93,27 @@ button {
   box-shadow: 1px 2px 3px #52057b;
 }
 
-textarea, input {
+textarea {
   padding: .5%;
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 30px;
   margin: 5px;
+  
 }
 
-textarea:focus, input:focus {
+textarea:focus {
   outline: none;
   border: 1px solid #3486eb;
   padding: 30px;
   margin: 5px;
 }
 
-textarea {
+textarea, input {
   min-width: 40%;
   min-height: 100px;
   padding: 30px;
+  text-align: center;
   margin: 5px;
 }
 
@@ -116,8 +123,7 @@ input {
 
 .posts {
   border: solid 4px #52057b;
-  margin: 10px;
-  padding: 00px;
+  margin: 40px;
   display: block;
   justify-content: center;
   background-color: whitesmoke;
@@ -136,8 +142,35 @@ input {
 }
 
 .edit-link {
-  display: block;
+  display: inline;
   margin: -1.5% 0 2% 0;
+}
+.comment-form {
+  margin-bottom: 5%;
+}
+
+.comment {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.comment:nth-child(odd) {
+  background-color: #fff5eb;
+}
+
+.comment .meta {
+  font-size: 90%;
+  margin-bottom: .5%;
+  opacity: .6;
+}
+
+.new-post-form input {
+  width: 300px;
+}
+
+.edit-post-form {
+  margin-bottom: 5%;
+  justify-content: center;
 }
 
 footer { 
@@ -157,7 +190,7 @@ h2 {
   text-align: center;
 }
 
-#posts {
+/* #posts {
   display: flex;
   flex-direction: column;
   background-color: rgb(0,0,0);;
@@ -165,7 +198,7 @@ h2 {
   justify-content: center;
   align-items: center;
   color: white;
-}
+} */
 
 /* .welcome {
   font-family: sans-serif;

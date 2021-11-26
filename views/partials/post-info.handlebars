@@ -1,14 +1,16 @@
-<div class="row col-sm-9">
-    <div class="post">
-        <div class="title">
-             <h4><a href="/post/{{id}}">{{title}}</a></h4>
-        </div>
+
+<section>
+<div class="post">
+    <div class="title">
+        <h4><a href="/post/{{id}}">{{title}}</a></h4>
     <div class="meta">
-        <h5>By {{user.username}} on {{format_date created_at}}</span></h5></div>  
-        <div class="post-content">{{post_content}}</div>
-    <div>
+        <h5>By {{user.username}} on {{format_date created_at}}</span></h5>
+        <div class="post-content">{{post_content}}
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-</div></div></div>
+   </div>
+  </div>
+ </div>
+</div>
 </section>
 
 
