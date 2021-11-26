@@ -14,7 +14,7 @@ html{
   display:flex;
   justify-content: space-between;
   background-color:#52057b;
-  /* padding: 10px; */
+  padding: 10px;
   border-radius: 5px;
   max-height: 80px;
 }
@@ -50,7 +50,7 @@ html{
 
 .header{
   border: solid 1px #52057b;
-  margin-top: 20px;
+  margin: 50px;
   padding: 40px;
   display: flex;
   justify-content: center;
