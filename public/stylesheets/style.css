@@ -138,6 +138,10 @@ input {
 .post {
   margin-bottom: 2%;
   line-height: 150%;
+  display: block;
+  justify-content: center;
+  background-color: lightgray;
+  box-shadow: 1px 2px 3px #52057b;
 }
 
 .post .title span {
@@ -157,28 +161,42 @@ input {
 .comment {
   padding: 1%;
   margin-bottom: 1%;
+  background-color: lightslategrey;
 }
 
-.comment:nth-child(odd) {
+/* .comment:nth-child(odd) {
   background-color: #fff5eb;
-}
+} */
 
-.comment .meta {
+.meta {
   font-size: 90%;
   margin-bottom: .5%;
   opacity: .6;
 }
+
+
 
 .new-post-form input {
   width: 300px;
   flex-wrap: wrap;
 }
 
+
 .edit-post-form {
   margin-bottom: 5%;
   justify-content: center;
 }
 
+li {
+  border: solid 4px #52057b;
+  margin: 20px;
+  background-color: darkgray;
+  box-shadow: 1px 2px 3px #52057b;
+}
+
+h4 {
+  margin: 5px;
+}
 footer { 
   margin-top: 20px;
   padding: 20px;
@@ -229,9 +247,7 @@ h2 {
   left: 0;
 }
 
-h4 {
-margin: 0px;
-}
+
 
 .signin-signup {
   position: absolute;
@@ -269,8 +285,7 @@ form.sign-in-form {
 .title {
   font-size: 24;
   color: #444;
-  margin-bottom: 10px;
-  font-style: italic;
+  margin: 20px;
 }
 
 .input-field {

@@ -14,7 +14,7 @@
 
 {{#if posts.length}}
 <section class="post-list">
-  <h2>Your Posts</h2>
+  <h2>Your Posts</h2>  
   <ol>
     {{#each posts as |post|}}
     <li>
@@ -28,8 +28,9 @@
 <br><br>
 
 {{#if posts.length}}
+<section class="post-list">
   <h2>Recent Posts</h2>
-    <ol class="post-list">
+    <ol>
       {{#each posts as |post|}}
     <li>
       {{> post-info post }}
@@ -39,6 +40,7 @@
 {{/each}}
 </ol> 
   {{/if}}
+</section>
 
 
 <script src="/javascript/add-post.js"></script>
