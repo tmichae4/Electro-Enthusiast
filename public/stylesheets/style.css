@@ -6,8 +6,20 @@
   box-sizing: border-box;
 }
 
-html{
+body, html{
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: color .1s;
+}
+
+a:hover {
+  background-color: gray;
 }
 
 #navbar{
@@ -33,6 +45,13 @@ html{
   margin: 10px 0;
 }
 
+#my-account {
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
 .logout-btn{
   width: 150px;
   background-color: black;
@@ -48,6 +67,17 @@ html{
   transition: 0.5s;
 }
 
+button {
+  background-color: darkgray;
+  border: 0;
+  padding: 1%;
+  color: white;
+  font-weight: bold;
+  transition: background-color .1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 .header{
   border: solid 4px #52057b;
   margin: 50px;
@@ -58,13 +88,56 @@ html{
   box-shadow: 1px 2px 3px #52057b;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: black;
+textarea, input {
+  padding: .5%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 30px;
+  margin: 5px;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+  border: 1px solid #3486eb;
+  padding: 30px;
+  margin: 5px;
+}
+
+textarea {
+  min-width: 40%;
+  min-height: 100px;
+  padding: 30px;
+  margin: 5px;
 }
 
 input {
   font-family: "Poppins", sans-serif;
+}
+
+.posts {
+  border: solid 4px #52057b;
+  margin: 10px;
+  padding: 00px;
+  display: block;
+  justify-content: center;
+  background-color: whitesmoke;
+  box-shadow: 1px 2px 3px #52057b;
+}
+
+.post {
+  margin-bottom: 2%;
+  line-height: 150%;
+}
+
+.post .title span {
+  font-style: italic;
+  font-size: 90%;
+  color: #7d7d7d;
+}
+
+.edit-link {
+  display: block;
+  margin: -1.5% 0 2% 0;
 }
 
 footer { 
