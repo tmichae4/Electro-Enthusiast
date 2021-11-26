@@ -17,8 +17,8 @@
         created by you on {{format_date post.created_at}}
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn" id="deletebtn">Delete post</button>
+    <button type="submit" id="post-btn">Save post</button>
+    <button type="button" class="delete-post-btn" id="post-btn">Delete post</button>
   </form>
 </article>
 

@@ -21,6 +21,26 @@ const postdata = [
     post_content:'Iphone has done it again!',
     user_id: 4
   },
+  {
+    title: 'example',
+    post_content:'example!',
+    user_id: 1
+  },
+  {
+    title: 'example',
+    post_content:'example!',
+    user_id: 1
+  },
+  {
+    title: 'example',
+    post_content:'example!',
+    user_id: 1
+  },
+  {
+    title: 'example',
+    post_content:'example!',
+    user_id: 1
+  },
 ]
 
 const seedPosts = () => Post.bulkCreate(postdata);
