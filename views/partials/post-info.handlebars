@@ -1,15 +1,24 @@
-<div class="row col-sm-9">
-    <div class="post">
-        <div class="title">
-             <h4><a href="/post/{{id}}">{{title}}</a></h4>
-        </div>
-    <div class="meta">
-        <h5>By {{user.username}} on {{format_date created_at}}</span></h5></div>  
-        <div class="post-content">{{post_content}}</div>
-    <div>
+
+<section>
+<div class="post">
+    <div class="post-title">
+        <h4><a href="/post/{{id}}">{{title}}</a></h4>
+    </div>
+    
+   <div class="meta">
+      {{user.username}} on {{format_date created_at}}
+    </div>
+
+    <br>
+        <div class="post-content">{{post_content}}
+        <br><br>
+    
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-</div></div></div>
+  </div>
+ </div>
+</div>
 </section>
+
 
 
 {{!-- <ol class="post-list">

@@ -1,26 +1,24 @@
-<article>
+<section class="edit-post">
   <a href="/dashboard"> &larr; Back to dashboard</a>
   <h2>
     Edit Post
   </h2>
   <form class="edit-post-form">
-    <form class="edit-post-form">
     <div>
-        <label for="post-title">post title:</label>
-      <input class="input" name="post-title" type="text" value="{{post.title}}" />
+       <input name="post-title" type="text" value="{{post.title}}" />
     </div>
     <div>
-        <label for="post-content">post content:</label>
-      <input class="textarea" name="post-content" type="text" value="{{post.post_content}}" />
+       <textarea name="post-content"> {{post_content}}</textarea>
     </div>
     <div>
         created by you on {{format_date post.created_at}}
+        |
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
-    <button type="submit" id="post-btn">Save post</button>
-    <button type="button" class="delete-post-btn" id="post-btn">Delete post</button>
+    <button type="submit" > Save post</button>
+    <button type="submit" class="delete-post-btn" id="post-btn">Delete post</button>
   </form>
-</article>
+</section>
 
 <form class="comment-form">
   <div>
