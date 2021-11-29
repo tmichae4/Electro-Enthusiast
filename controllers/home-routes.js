@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
     })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
-      res.render('dashboard', { 
+      res.render('homepage', { 
         // change to homepage!!!!//
       posts,
       loggedIn: req.session.loggedIn
@@ -89,7 +89,7 @@ router.get('/', (req, res) => {
   router.get('/login', (req, res) => {
     console.log(req.session)
     if (req.session.loggedIn) {
-      res.redirect('/dashboard');
+      res.redirect('/');
       return;
     }
   

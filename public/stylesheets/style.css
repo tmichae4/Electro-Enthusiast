@@ -14,7 +14,7 @@ body, html{
 
 a {
   text-decoration: none;
-  color: whitesmoke;
+  color: white;
   transition: color .1s;
 }
 
@@ -29,6 +29,10 @@ a:hover {
   padding: 10px;
   border-radius: 5px;
   max-height: 80px;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
 }
 
 .navbar a:hover{
@@ -137,22 +141,22 @@ input {
 
 .post {
   margin-bottom: 2%;
-  line-height: 150%;
   display: block;
   justify-content: center;
-  background-color: lightgray;
+  color: whitesmoke;
+  background-color: black;
   box-shadow: 1px 2px 3px #52057b;
 }
 
 .post .title span {
   font-style: italic;
   font-size: 90%;
-  color: #7d7d7d;
+  color: darkgray;
 }
 
 .edit-link {
   display: inline;
-  margin: -1.5% 0 2% 0;
+  margin: 0 2% 0;
 }
 .comment-form {
   margin-bottom: 5%;
@@ -164,17 +168,35 @@ input {
   background-color: lightslategrey;
 }
 
-/* .comment:nth-child(odd) {
+.comment:nth-child(odd) {
   background-color: #fff5eb;
-} */
+}
 
-.meta {
+#meta {
   font-size: 90%;
   margin-bottom: .5%;
   opacity: .6;
+  color: whitesmoke solid;
 }
 
+.post-title {
+  background-color: black;
+  color: whitesmoke;
+  border: lightslategrey solid 1px;
+}
+/* section .post{
+margin-bottom: 2%;
+  display: block;
+  justify-content: center;
+  color: whitesmoke;
+  background-color: black;
+  box-shadow: 1px 2px 3px #52057b;
+} */
 
+.post-content {
+  background-color: black;
+  border: lightslategrey solid 1px;
+}
 
 .new-post-form input {
   width: 300px;
@@ -195,7 +217,11 @@ li {
 }
 
 h4 {
-  margin: 5px;
+  padding: 5px;
+  margin: 2px;
+  background-color: #2C2C2C;
+  color: whitesmoke;
+  text-align: center;
 }
 footer { 
   margin-top: 20px;

@@ -1,12 +1,51 @@
+
+{{#unless loggedIn}}
+<nav>
+  <div class="navbar" id="navbar">
+        {{!-- <a href="#" id="my-account"><span class="glyphicon glyphicon-user"></span>My Account</a> --}}
+        <a href="/login" id="dashboard">Electro_Enthusiast</a>
+        <a href="/login" id="dashboard">login</a>
+      {{/unless}} 
+      </nav>
+
+<div class="header">
+      <header>
+        <p>Welcome to the community. This is your place to ask questions, leave reviews, and interact with fellow electronic enthusiats. Check out new posts below and let's get to chatting!</p>
+        </header>
+     </div>
+
+
+{{#if loggedIn}}
 <ol class="post-list">
-  {{#each posts as |post|}}
+  {{#each posts}}
   <li>
-    {{> post-info post }}
+    <section>
+      <div class="post-title">
+      {{title}}
+      </div>
+      <div class="column">
+      <span class=""> </span>
+      </div>
+     <div class="post"></div>
+     {{post_content}}
+        </div>
+      <div class="meta">
+        By {{user.username}} on
+        {{format_date created_at}}
+        |
+        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+      </div>
+    </section>
   </li>
   {{/each}}
 </ol>
+{{/if}}
 
 
+
+  {{#unless loggedIn}}
+  <script src="/javascript/login.js"></script>
+  {{/unless}}
 
 
 {{!-- <ol class="post-list">
