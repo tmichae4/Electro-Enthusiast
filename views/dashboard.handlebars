@@ -27,21 +27,5 @@
 {{/if}}
 <br><br>
 
-{{#if posts.length}}
-<section class="post-list">
-  <h2>Recent Posts</h2>
-    <ol>
-      {{#each posts as |post|}}
-    <li>
-      {{> post-info post }}
-    </li>
-{{else}}
-<h6 class="pb-4 has-text-centered is-italic">there are currently no posts</h6>
-{{/each}}
-</ol> 
-  {{/if}}
-</section>
-
-
 <script src="/javascript/add-post.js"></script>
 
