@@ -1,9 +1,9 @@
-# ELECTRO_ENTUSIAST!
+# ELECTRO_ENTHUSIAST!
 
 ## USER STORY
 - AS A Electronics Enthusiast who is looking to write or read reviews of TV and game consoles.
 I WANT an online forum website that provides a platform to leave reviews and look at other user reviews of similar products.
-SO THAT I can can search for TVs and game consoles, write, read and rate (thumbs up/down) other user reviews of those TV and game consoles.
+SO THAT I can learn more about new upcoming technology.
 
 
 ## DESCRIPTION
@@ -15,7 +15,7 @@ SO THAT I can can search for TVs and game consoles, write, read and rate (thumbs
 
 ![Login](https://user-images.githubusercontent.com/83481294/141714798-e8bf6dc7-6c39-4880-baf7-833b12e62407.jpg)
 
-http://localhost:3001/login
+http://localhost:3006/login
 
 
 ## BUILT WITH
@@ -36,6 +36,7 @@ http://localhost:3001/login
 
 - Add more features : avatar, like/dislike, inbox, categories, tags, search bar
 - Add more styling
+- Add search bar for TVs and game consoles, write, read and rate (thumbs up/down) other user reviews of those TV and game consoles.
 
 ## ROADMAP
 
